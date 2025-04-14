@@ -114,3 +114,4 @@ We'll be using canvas throughout the semester to manage submissions for lab assi
 - Correctly creating the nodes: **15** Points
 - Correctly creating the launch file: **10** Points
 - Written questions: **10** Points
+- cluttered directory (eg running colcon build in multiple directory levels): **-2** points 
