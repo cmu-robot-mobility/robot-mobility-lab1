@@ -4,7 +4,7 @@
 
 - Getting familiar with ROS 2 workflow
 - Understanding how to create nodes with publishers, subscribers
-- Understanding ROS 2 package structure, files, dependenciees
+- Understanding ROS 2 package structure, files, dependencies
 - Creating launch files
 
 ## Before you start
@@ -22,7 +22,7 @@ In this lab, it'll be helpful to read these tutorials if you're stuck:
 
 ## 2.1 Getting ready **(Native Ubuntu)**
 
-Install ROS 2 following the instructions here: [https://docs.ros.org/en/foxy/Installation.html](https://docs.ros.org/en/foxy/Installation.html).
+Install ROS 2 following the instructions here: <https://docs.ros.org/en/foxy/Installation.html>.
 
 Next, create a workspace:
 ```bash
@@ -39,10 +39,10 @@ If you can't have Ubuntu installed natively, install Docker on your system follo
 Next, start a container with a bind mount to your workspace directory on your host system inside this repo by:
 
 ```bash
-docker run -it -v <absolute_path_to_this_repo>/lab1_ws/src/:/lab1_ws/src/ --name f1tenth_lab1 ros:foxy
+docker run -it -v <absolute_path_to_this_repo>/lab1_ws/src/:/lab1_ws/src/ --name robot_mobility_lab1 ros:foxy
 ```
 
-This will create a workspace directory on the host at `<absolute_path_to_this_repo>/lab1_ws/src`. It'll create the container based on the official ROS 2 Foxy image, and give the container a name `f1tenth_lab1`. You'll then have access to a terminal inside the container.
+This will create a workspace directory on the host at `<absolute_path_to_this_repo>/lab1_ws/src`. It'll create the container based on the official ROS 2 Foxy image, and give the container a name `robot_mobility_lab1`. You'll then have access to a terminal inside the container.
 
 `tmux` is recommended when you're working inside a container. It could be installed in the container via: `apt update && apt install tmux`. `tmux` allows you to have multiple `bash` session in the same terminal window. This will be very convenient working inside containers. A quick reference on how to use tmux can be found [here](https://www.redhat.com/sysadmin/introduction-tmux-linux). You can start a session with `tmux`. Then you can call different `tmux` commands by pressing `ctrl+B` first and then the corresponding key. For example, to add a new window, press `ctrl+B` first and release and press `c` to create a new window. You can also move around with `ctrl+B` then `n` or `p`. 
 
@@ -69,7 +69,7 @@ If you need multiple terminals and you're inside a Docker container, use `tmux`.
 - The package supports both `Python` and `C++`.
 - The package needs to have the `ackermann_msgs` dependency.
 - Both of these can be done by declaring the correct dependencies in `package.xml`.
-- If declared properly the depencies could be installed using `rosdep` as follows :-
+- If declared properly the dependencies could be installed using `rosdep` as follows :-
   ```bash
   rosdep update --include-eol-distros
   rosdep install -i --from-path src --rosdistro foxy -y
@@ -109,9 +109,5 @@ In addition to the three deliverables described in this document, fill in the an
 
 We'll be using canvas throughout the semester to manage submissions for lab assignments. After you're finished, download the zip file containing the workspace or the 3 deliverables along with the **`SUBMISSION.md`** and submit the zip file to canvas.
 
-## 9: Grading Rubric (Total points: 45)
-- Correctly creating the package: **10** Points
-- Correctly creating the nodes: **15** Points
-- Correctly creating the launch file: **10** Points
-- Written questions: **10** Points
-- cluttered directory (eg running colcon build in multiple directory levels): **-2** points 
+## 9: Grading Rubric
+Will be updated soon.
