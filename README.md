@@ -16,13 +16,13 @@ The goal of this lab is to get you familiar with the ROS 2 workflow. You'll have
 
 In this lab, it'll be helpful to read these tutorials if you're stuck:
 
-[https://docs.ros.org/en/foxy/Tutorials.html](https://docs.ros.org/en/foxy/Tutorials.html)
+<https://docs.ros.org/en/humble/Tutorials.html>
 
-[https://roboticsbackend.com/category/ros2/](https://roboticsbackend.com/category/ros2/)
+<https://roboticsbackend.com/category/ros2/>
 
 ## 2.1 Getting ready **(Native Ubuntu)**
 
-Install ROS 2 following the instructions here: <https://docs.ros.org/en/foxy/Installation.html>.
+Install ROS 2 following the instructions here: <https://docs.ros.org/en/humble/Installation.html>.
 
 Next, create a workspace:
 ```bash
@@ -39,10 +39,10 @@ If you can't have Ubuntu installed natively, install Docker on your system follo
 Next, start a container with a bind mount to your workspace directory on your host system inside this repo by:
 
 ```bash
-docker run -it -v <absolute_path_to_this_repo>/lab1_ws/src/:/lab1_ws/src/ --name robot_mobility_lab1 ros:foxy
+docker run -it -v <absolute_path_to_this_repo>/lab1_ws/src/:/lab1_ws/src/ --name robot_mobility_lab1 ros:humble
 ```
 
-This will create a workspace directory on the host at `<absolute_path_to_this_repo>/lab1_ws/src`. It'll create the container based on the official ROS 2 Foxy image, and give the container a name `robot_mobility_lab1`. You'll then have access to a terminal inside the container.
+This will create a workspace directory on the host at `<absolute_path_to_this_repo>/lab1_ws/src`. It'll create the container based on the official ROS 2 Humble image, and names the container `robot_mobility_lab1`. You'll then have access to a terminal inside the container.
 
 `tmux` is recommended when you're working inside a container. It could be installed in the container via: `apt update && apt install tmux`. `tmux` allows you to have multiple `bash` session in the same terminal window. This will be very convenient working inside containers. A quick reference on how to use tmux can be found [here](https://www.redhat.com/sysadmin/introduction-tmux-linux). You can start a session with `tmux`. Then you can call different `tmux` commands by pressing `ctrl+B` first and then the corresponding key. For example, to add a new window, press `ctrl+B` first and release and press `c` to create a new window. You can also move around with `ctrl+B` then `n` or `p`. 
 
@@ -53,7 +53,7 @@ A cheatsheet for the original tmux shortcut keys can be found [here](https://tmu
 Now that we have the access to a ROS 2 environment, let's test out the basic ROS 2 commands. In the terminal, run:
 
 ```bash
-source /opt/ros/foxy/setup.bash
+source /opt/ros/humble/setup.bash
 ros2 topic list
 ```
 You should see two topics listed:
@@ -71,8 +71,8 @@ If you need multiple terminals and you're inside a Docker container, use `tmux`.
 - Both of these can be done by declaring the correct dependencies in `package.xml`.
 - If declared properly the dependencies could be installed using `rosdep` as follows :-
   ```bash
-  rosdep update --include-eol-distros
-  rosdep install -i --from-path src --rosdistro foxy -y
+  rosdep update
+  rosdep install -i --from-path src --rosdistro humble -y
   ```
 - Your package folder should be neat. You shouldn't have multiple 'src' folders or unnecessary 'install' or 'build' folders.
 
