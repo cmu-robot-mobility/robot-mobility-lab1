@@ -110,4 +110,10 @@ In addition to the three deliverables described in this document, fill in the an
 We'll be using canvas throughout the semester to manage submissions for lab assignments. After you're finished, download the zip file containing the workspace or the 3 deliverables along with the **`SUBMISSION.md`** and submit the zip file to canvas.
 
 ## 9: Grading Rubric
-Will be updated soon.
+**Total: 40 points**
+
+- Correctly creating the package: **10** Points
+- Correctly creating the nodes: **15** Points
+- Correctly creating the launch file: **10** Points
+- Written questions (`SUBMISSION.md`): **5** Points
+- Cluttered directory (eg running `colcon build` at multiple directory levels): **-2** Points
